@@ -3,7 +3,7 @@
 
 {
     'name': 'Saml2 Authentication',
-    'version': '12.0.1.0.1',
+    'version': '12.0.2.0.1',
     'category': 'Tools',
     'author': 'XCG Consulting, Odoo Community Association (OCA)',
     'website': 'https://github.com/OCA/server-auth',
@@ -13,7 +13,7 @@
         'web',
     ],
     "external_dependencies": {
-        "python": ["lasso"],
+        "python": ["pysaml2"],
     },
     "demo": [
         'demo/auth_saml.xml',
