@@ -5,7 +5,7 @@
 import functools
 import json
 import logging
-
+import base64
 import werkzeug.utils
 from werkzeug.urls import url_quote_plus
 
@@ -166,7 +166,7 @@ class AuthSAMLController(http.Controller):
             redirect.autocorrect_location_header = True
             return redirect
 
-        state = json.loads(kw["RelayState"])
+        state = json.loads(base64.b64decode(kw['RelayState']))
         provider = state["p"]
         dbname = state["d"]
         context = state.get("c", {})

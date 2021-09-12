@@ -205,7 +205,7 @@ class AuthSamlProvider(models.Model):
 
         saml_client = self._get_client_for_provider(url_root)
         reqid, info = saml_client.prepare_for_authenticate(
-            sign=self.sign, relay_state=json.dumps(state), sigalg=sig_alg
+            sign=self.sign, relay_state=bytes.decode(base64.b64encode(json.dumps(state).encode('utf-8'))), sigalg=sig_alg
         )
 
         redirect_url = None
