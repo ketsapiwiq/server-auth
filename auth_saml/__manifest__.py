@@ -15,7 +15,7 @@
     "data": [
         "security/ir.model.access.csv",
         "views/auth_saml.xml",
-        "views/res_config_settings.xml",
+        # "views/res_config_settings.xml",
         "views/res_users.xml",
         "data/ir_config_parameter.xml",
     ],
